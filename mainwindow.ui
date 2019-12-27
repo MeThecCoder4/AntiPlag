@@ -87,7 +87,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Words found:</string>
+        <string>Repeating words:</string>
        </property>
       </widget>
      </item>

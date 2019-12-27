@@ -2,8 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <map>
-#include <set>
 #include <QStringListModel>
 #include <QModelIndex>
 
@@ -22,17 +20,9 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    std::map<QString, int> mapIdentifiers(const QString& text);
-
-    int calculateCoincidence(const std::map<QString, int>& map1, const std::map<QString, int>& map2);
-
     QStringListModel* m_listModel;
 
-    QString m_text1;
-
-    QString m_text2;
-
-    std::set<QString> m_uniqueElements;
+    QString m_lastText1, m_lastText2;
 
 private slots:
     void compareTexts();
