@@ -3,7 +3,9 @@
 
 #include <QMainWindow>
 #include <map>
+#include <set>
 #include <QStringListModel>
+#include <QModelIndex>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,8 +28,16 @@ private:
 
     QStringListModel* m_listModel;
 
+    QString m_text1;
+
+    QString m_text2;
+
+    std::set<QString> m_uniqueElements;
+
 private slots:
     void compareTexts();
+
+    void markTextsWords(const QModelIndex& index);
 
 };
 #endif // MAINWINDOW_H
